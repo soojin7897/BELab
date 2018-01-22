@@ -114,7 +114,7 @@
 
 											<h3><span style="color:red"><li>[Discrete-time: Unit impulse and Unit step function의 특징]</li></span></h3>
 											<p>
-												
+
 												<br>
 												<br>Discrete time일 때의 유닛 임펄스와 스텝 펑션을 살펴보겠습니다.
 												<br>두 함수는 중요한 신호이며 신호 및 시스템 분석에서 유용하게 사용될 신호입니다.
@@ -144,21 +144,24 @@
 													Fig 3. Discrete time Characteristic</div></a>
 												<br>
 											</p>
-												<h3><span style="color:red><li>[Continuous-time: Unit impulse and Unit step function의 특징]</li></span></h3>
+												<h3><span style="color:red"><li>[Continuous-time: Unit impulse and Unit step function의 특징]</li></span></h3>
 											<p>
 												<br>
-												<a href="#" class="bordered-feature-image"><img src="images/Fig4.PNG"  alt="" /><div align="center">
-													Fig 4. when ∆ goes zero, u(t) become extreme of 𝑢∆(𝑡)</div></a>
 												<br>다음으로 Continuous time에서의 유닛 임펄스와 유닛 스텝을 보겠습니다.
 												<br>
 												<br>첫 번째 그림은 continuous time에서의 유닛 스텝이고 t=0인 부분이 불연속적임을 볼 수 있습니다. 하지만 정의 자체에도 나와있지 않기 때문에 신경쓸 필요는 없다고 생각합니다.
 												<br>두 번째 그림은 continuous time에서의 유닛 임펄스입니다.
 												<br>
+												<a href="#" class="bordered-feature-image"><img src="images/Fig4.PNG"  alt="" /><div align="center">
+													Fig 4. when ∆ goes zero, u(t) become extreme of 𝑢∆(𝑡)</div></a>
+												<br>
 												<br>
 												<br>식을 보면 디스크리트 타임에서의 합은 연속시간에서의 적분에 대응되므로 continuous 유닛 스텝은 continuous 유닛 임펄스 함수의 적분이 되어야 합니다.
 												<br>마찬가지로 이산시간 유닛 임펄스는 이산시간 유닛 스텝의 1차 차분이며 이 일차 차분은 연속시간에서의 1차 도함수에 대응되므로 연속시간 유닛 임펄스는 연속시간 유닛 스텝의 1차 도함수가 되어야 합니다.
-												<br>그래서 이 식을 t로 미분할 수 있습니다. 그런데 u(t)는 t는 0이 아닐 때 상수함수로 일정하므로 미분 식에 의해서 델타 t=0이 아닐 때 0이 됩니다. 따라서 u(t)는 t=0에서 불연속적입니다. 따라서 t=0에서 u(t)는 미분불가능합니다.
-												<br>그렇다면 연속시간에서의 유닛 임펄스 함수 델타(t)를 그래프로 어떻게 그리냐면 미분식과 근사를 사용합니다.𝛿∆(𝑡)
+												<br>그래서 이 식을 t로 미분할 수 있습니다. 그런데 u(t)는 t는 0이 아닐 때 상수함수로 일정하므로 미분 식에 의해서 델타 t=0이 아닐 때 0이 됩니다.
+												<br>
+												<br>따라서 u(t)는 t=0에서 불연속적입니다. 따라서 t=0에서 u(t)는 미분불가능합니다.
+												<br>그렇다면 연속시간에서의 유닛 임펄스 함수 델타(t)를 그래프로 어떻게 그리냐면 미분식과 근사를 사용합니다.
 												<br>그림에서와 같이 u(t)를 0<t<∆ 동안, 0에서 1로 증가하는 u∆(t)로 근사합니다. 여기서 ∆가 작아질수록 u∆(t)는 u(t)에 가까워집니다.
 												<br>즉 u(t)는 ∆가 0으로 갈 때 u∆(t)의 극한이 됩니다.
 											</p>
@@ -178,7 +181,7 @@
 											</p>
 
 											<p>
-												<h3><span style="color:red"><li>[연속시간 신호 시스템과 이산시간 신호 시스템]</li></span></h3>	
+												<h3><span style="color:red"><li>[연속시간 신호 시스템과 이산시간 신호 시스템]</li></span></h3>
 												<br>
 												<br>시스템은 무엇일까요?
 												<br>
@@ -202,13 +205,15 @@
 												<br>이 때 제한된 입력으로 제한된 범위로 출력됨을 알 수 있고 이를 일종의 stable system이라 볼 수 있습니다.
 												<br>
 												<br>
-												<a href="#" class="bordered-feature-image"><div align="center" ><img src="images/Fig8.PNG" style="width:200px; height:250px" alt="" /><div align="center"></div>
+												<div align="center" ><a href="#" class="bordered-feature-image"><img src="images/Fig8.PNG" style="width:200px; height:250px" alt="" /></div><div align="center">
 													Fig 8. stable system and unstable system </div></a>
 												<br>결과적으로 x(t)에 작은 힘이 가해진다면 수직으로부터 굴절각도 작을 것입니다.
 												<br>반면 아래 그림은 중력이 수직으로부터 굴절 각을 증가시키는 힘이 가해질 것이고, 가해진 x(t)가 작을지라도 굴절 각은 커지므로 추는 쓰러지면서 불안정한 시스템이 됩니다.
 												<br>
 												<br>타임 인베리언스의 경우, 개념적으로 만약 시스템의 행동과 특성이 시간에 대해 고정되어 있다면 그 시스템은 타임 인베리언스의 특성을 지녔다고 할 수 있습니다.
 												<br>예를들어, 우리가 같은 시스템으로 내일 실험해서 얻은 값이 오늘과 같은 실험을 통해 얻은 값과 같음을 예상할 수 있습니다.
+												<br>
+												<br>
 												<br>
 												<a href="#" class="bordered-feature-image"><img src="images/Fig9.PNG"  alt="" /><div align="center">
 													Fig 9. Linearity </div></a>
