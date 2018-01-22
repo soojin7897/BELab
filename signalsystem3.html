@@ -1,0 +1,257 @@
+<!DOCTYPE HTML>
+<!--
+	Halcyonic by HTML5 UP
+	html5up.net | @ajlkn
+	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+-->
+<html>
+	<head>
+		<title>퓨리에 급수</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+		<!--[if lte IE 8]><script src="assets/js/ie/html5shiv.js"></script><![endif]-->
+		<link rel="stylesheet" href="assets/css/main.css" />
+		<!--[if lte IE 9]><link rel="stylesheet" href="assets/css/ie9.css" /><![endif]-->
+	</head>
+	<body class="subpage">
+		<div id="page-wrapper">
+
+			<!-- Header -->
+				<div id="header-wrapper">
+					<header id="header" class="container">
+						<div class="row">
+							<div class="12u">
+
+								<!-- Logo -->
+									<h1><a href="index.html" id="logo">SJ's BE Lab</a></h1>
+
+								<!-- Nav -->
+									<nav id="nav">
+										<a href="index.html">Homepage</a>
+										<a href="threecolumn.html">My Diary</a>
+										<a href="signalsystem1.html">Study</a>
+										<a href="onecolumn.html">Project</a>
+										<a href="twocolumn1.html">ETC</a>
+									</nav>
+
+							</div>
+						</div>
+					</header>
+				</div>
+
+			<!-- Content -->
+				<div id="content-wrapper">
+					<div id="content">
+						<div class="container">
+							<div class="row">
+								<div class="3u 12u(mobile)">
+
+									<!-- Sidebar -->
+										<section>
+											<header>
+												<h2>Study</h2>
+											</header>
+											<p>
+												Study list
+											</p>
+											<ul class="link-list">
+												<li><a href="signalsystem1.html">1 연속시간 신호와 이산시간 신호</a></li>
+												<li><a href="signalsystem2.html">2 LTI 시스템</a></li>
+												<li><a href="signalsystem3.html">3 주기신호의 푸리에 급수</a></li>
+												<li><a href="signalsystem4.html">4 연속시간 푸리에 변환</a></li>
+												<li><a href="signalsystem5.html">5 이산시간 푸리에 변환</a></li>
+												<li><a href="signalsystem6.html">6 신호와 시스템의 시간 주파수 특성</a></li>
+												<li><a href="signalsystem7.html">7 샘플링</a></li>
+
+											</ul>
+										</section>
+										<section>
+											<header>
+												<h2>Research</h2>
+											</header>
+											<p>
+												My Research
+											</p>
+											<ul class="link-list">
+												<li><a href="twocolumn1.html">Idea</a></li>
+												<li><a href="twocolumn2.html">Paper</a></li>
+												<li><a href="#">#</a></li>
+												<li><a href="#">#</a></li>
+												<li><a href="#">#</a></li>
+												<li><a href="#">#</a></li>
+											</ul>
+										</section>
+
+								</div>
+								<div class="9u 12u(mobile) important(mobile)">
+
+									<!-- Main Content -->
+										<section>
+											<header>
+												<h2>주기신호의 푸리에 급수</h2>
+												<h3>Fourier series of periodic signals</h3>
+											</header>
+											<h3><span style="color:red; border: 20px"><li>푸리에 급수란 무엇일까?</li></span></h3>
+											<p>
+												<br>퓨리에 변환을 논하기 전에 우선 퓨리에 급수에 대한 정의가 필요합니다.
+												<br>다음 그림은 매트랩에서 얻은 주기 신호와 비주기 신호입니다.
+												<br>그림만 놓고 봤을 때 가장 수월하게 분석할 수 있다고 생각드는 게 왼쪽의 주기 신호입니다.
+												<br>
+												<br>즉 주기신호라면, 어떤 파동이든지 모조리 표현할 수 있는 식을 만들자는 취지 아래 구현 된 것이 퓨리에 급수입니다.
+												<br>왼쪽에 퓨리에 급수식이 나오는데, 급수라는 것은 고딩때 배운 무한급수처럼 수들의 계속적인 합이 무한대로 이어진 것을 의미하는데 이처럼 퓨리에 급수도 무언가 계속 더해진 형태를 갖는다는 것을 짐작할 수 있습니다.
+												<br>
+												<br>
+												<a href="#" class="bordered-feature-image"><img src="images/Fig3.1.png"  alt="" /><div align="center">
+													Fig 1. Periodic signal and Non-periodic signal</div></a>
+												<br>
+											</p>
+
+											<h3><span style="color:red; border: 20px; solid #48BAE4"><li>[퓨리에 계수의 의미와 공식]</li></span></h3>
+											<p>
+												<br>
+												<br>여기 빨간네모박스안에서 두 항만 떼어서 보면 cos0은 1, sin0은 0이므로 결국 a0만 남습니다.
+												<br>
+												<br>따라서 이 a0는 신호가 가질 수 있는 모든 성분을 표시해야 하기 때문에 0을 기준으로 (+)든 (-)든 직류 offset을 의미합니다.
+												<br>나머지 식도 마찬가지이며 파형성분이 들어가면 코사인과 사이파가 들어가는 것은 당연합니다.
+												<br>이 때 an은 코사인파진폭 bn은 사인파 진폭을 의미하게 됩니다.
+												<br>이러한 식을 간결하게 하여 시그마가 들어간 식이 최종형태가 됩니다.
+												<br>
+												<br>지금까지 논한것만으로는 임의의 파형에 대한 합성된 파형을 모두 분석해 냈다고 볼 수 없는데 그렇다면 식에서 보이는 a1, a2, b1,b2 등등 이런것들이 보이는데 이것을 우리는 계수 coefficient라고 부릅니다.
+												<br>이 계수에 대한 의미와 어떻게 계산에 내는지가 중요합니다.
+												<br>계수라는 게 예를 들어 3x+2=10이라는 식이 있다고 치면 변수 x의 앞에 오는 3이 일종의 계수가 됩니다.
+												<br>
+												<br>이것을 퓨리에 급수식과 연관지어 생각해보면 cos, sin은 각속도에 따라 변하니 일종의 변수가 되는 것이고, 그 앞에 붙은 an, bn이 일종의 계수가 되는 것입니다.
+												<br>
+												<br>따라서 퓨리에 계수를 구한다는 것은 임의의 파동을 형성하는 합성주파수들 각각의 진폭을 구한다는 말과 동일합니다.
+												<br>
+												<br>아래 식은 계수구하는 식이며 정리하자면 a0은 offset, an은 코사인진폭 bn은 사인진폭으로써 공식증명은 여기서 생략하겠습니다.
+												<br>
+												<br>
+												<br>
+												<a href="#" class="bordered-feature-image"><img src="images/Fig3.2.png"  alt="" /><div align="center">
+													Fig 2. Find meaning of Coefficient and Formula</div></a>
+											</p>
+
+											<h3><span style="color:red; border: 20px; solid #48BAE4"><li>[오일러 공식의미와 대입]</li></span></h3>
+											<p>
+												<br>
+												<br>여러 책들을 보면 대게 퓨리에 급수나 계수를 바로 사용하는 것이 아니라 자연지수가 포함된 복소형식으로 변환하여 사용하는 것을 매우 선호하는데 이 때 오일러 공식을 이용합니다.
+												<br>오일러공식은 다음과 같은 식인데, 이 식을 증명하는 것은 직관적으로 쉽습니다. 양변에 0을 대입하면 1이 되기 때문에 두 식은 동일해집니다.
+												<br>
+												<br>이 공식을 보고 바로 형상화 시킬 수 있는 사람이라면 매우 똑똑할 것입니다.
+												<br>하지만 안타깝게도 저는 바로 직관적으로 상상이 안되었기 때문에 실수부와 허수부를 따로 떼어두고 생각을 해봤습니다.
+												<br>
+												<br>실수부 즉 코사인그림을 볼 수 있습니다.
+												<br>I가 있는 허수부의 경우 사인파를 상상할 수 있습니다.
+												<br>이 둘을 합쳐보면 3차원으로 생각해볼 때 가우스평면 상에 나선형으로 돌아가는 모습일 것입니다.
+												<br>
+												<br>이것을 이차원으로 봤을 때 동영상과 같은 그림을 볼 수 있습니다.
+												<br>
+												<br>이 밖에 복소형식으로 변환하거나 부분적분법을 통한 계산등이 있지만 발표하기에 힘든 부분이 있어 내용은 이것으로 마치겠습니다.
+												<br>
+												<br>
+												<a href="#" class="bordered-feature-image"><img src="images/Fig3.3.png"  alt="" /><div align="center">
+													Fig 3. 𝒆^𝒊𝒙=𝐜𝐨𝐬⁡𝒙+𝒊 𝒔𝒊𝒏 𝒙</div></a>
+												<br>
+												<div align="center"><iframe width="560" height="315" src="https://www.youtube.com/embed/KbIM3zpDP9Y" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe></div>
+												<br>
+											</p>
+											<p>
+												<div id="disqus_thread"></div>
+												<script>
+
+												/**
+												*  RECOMMENDED CONFIGURATION VARIABLES: EDIT AND UNCOMMENT THE SECTION BELOW TO INSERT DYNAMIC VALUES FROM YOUR PLATFORM OR CMS.
+												*  LEARN WHY DEFINING THESE VARIABLES IS IMPORTANT: https://disqus.com/admin/universalcode/#configuration-variables*/
+												/*
+												var disqus_config = function () {
+												this.page.url = PAGE_URL;  // Replace PAGE_URL with your page's canonical URL variable
+												this.page.identifier = PAGE_IDENTIFIER; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
+												};
+												*/
+												(function() { // DON'T EDIT BELOW THIS LINE
+												var d = document, s = d.createElement('script');
+												s.src = 'https://https-soojin7897-github-io-belab-index-html.disqus.com/embed.js';
+												s.setAttribute('data-timestamp', +new Date());
+												(d.head || d.body).appendChild(s);
+												})();
+												</script>
+												<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>  
+											</p>
+										</section>
+
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+
+			<!-- Footer -->
+				<div id="footer-wrapper">
+					<footer id="footer" class="container">
+						<div class="row">
+							<div class="8u 12u(mobile)">
+
+								<!-- Links -->
+								<section>
+									<h2>Related frequently used sites</h2>
+									<div>
+										<div class="row">
+											<div class="3u 12u(mobile)">
+												<ul class="link-list last-child">
+													<li><a href="http://klinear.tistory.com">김선형 : 정보보호 공부</a></li>
+												</ul>
+											</div>
+											<div class="3u 12u(mobile)">
+												<ul class="link-list last-child">
+													<li><a href="http://blog.naver.com/PostView.nhn?blogId=ldj1725&logNo=220419060424">새벽: Signal System</a></li>
+												</ul>
+											</div>
+											<div class="3u 12u(mobile)">
+												<ul class="link-list last-child">
+													<li><a href="#">???</a></li>
+												</ul>
+											</div>
+											<div class="3u 12u(mobile)">
+												<ul class="link-list last-child">
+													<li><a href="#">???</a></li>
+												</ul>
+											</div>
+										</div>
+									</div>
+								</section>
+
+						</div>
+						<div class="4u 12u(mobile)">
+
+							<!-- Blurb -->
+								<section>
+									<h2>Another My Blog</h2>
+									<p>
+										Study of My undergraduate's degree
+										<a href="https://blog.naver.com/soojin7897">RedCoder를 위하여</a>
+									</p>
+								</section>
+
+						</div>
+					</div>
+				</footer>
+			</div>
+
+		<!-- Copyright -->
+			<div id="copyright">
+				Copyright 2018. BSJ All rights reserved.
+			</div>
+
+		</div>
+
+		<!-- Scripts -->
+			<script src="assets/js/jquery.min.js"></script>
+			<script src="assets/js/skel.min.js"></script>
+			<script src="assets/js/skel-viewport.min.js"></script>
+			<script src="assets/js/util.js"></script>
+			<!--[if lte IE 8]><script src="assets/js/ie/respond.min.js"></script><![endif]-->
+			<script src="assets/js/main.js"></script>
+
+	</body>
+</html>
