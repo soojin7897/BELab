@@ -198,12 +198,51 @@
 														<br>w가 익숙지 않으면 그저 주파수로 생각해 줘도 무방합니다.
 														<br>경우에 따라서 역퓨리에 변환식이 다르게 차용되므로 헤갈려 하지말아야 겠습니다.
 													</p>
-													<h3><span style="color:red"><li>[퓨리에 변환 예제]</li></span></h3>
+													<h3><span style="color:red"><li>[퓨리에 변환 예제와 sinc함수]</li></span></h3>
 														<p>
-															<br>아래 그림과 같은 파형을 주파수 영역으로 변환하는 퓨리에 변환을 해봅시다.
+															<br>지금부터 통신이론 교과서에 자주 나오는 sinc함수와 함께 퓨리에 변환을 살펴보겠습니다.
+															<br>
+															<br>사실 퓨리에 변환 문제를 어떻게 해결하느냐보다 sinc함수에 초점을 둔 다음과 같은 예제가 있습니다.
+															<br>아래 그림과 같은 파형을 시간영역에서 주파수 영역으로 변환하는 퓨리에 변환을 해봅시다.
 															<br>
 															<div align="center"><a href="#" class="bordered-feature-image"><img src="images/4.8.PNG"  style="width:400px; height:auto"  alt="" /></div><div align="center">
 																Fig 8. 주파수 영역으로 변환하는 퓨리에 변환</div></a>
+															<br>
+															<br>일단 정적분의 영역은 -T~T까지이며 회전연산자는 수학적 기호 i는 전자공학에서 교류전류와 헷갈리므로 j와 바꾸어 사용하겠습니다.
+															<br>
+															<div align="center"><a href="#" class="bordered-feature-image"><img src="images/4.9.PNG"  style="width:600px; height:auto"  alt="" /></div><div align="center">
+																Fig 9. 주파수 영역으로 변환하는 퓨리에 변환 공식 유도 </div></a>
+															<br>
+															<br>자연지수함수를 사인함수로 만들기 위해 분모와 분자에 2를 곱합니다.
+															<br>
+															<div align="center"><a href="#" class="bordered-feature-image"><img src="images/4.10.PNG"  style="width:800px; height:auto"  alt="" /></div><div align="center">
+																Fig 10. 자연지수함수를 사인함수로 만들기 위한 유도공식 </div></a>
+															<br>
+															<br>사인함수가 자연지수함수 꼴로 바뀔수 있는 것을 증명했으므로 퓨리에 변환식은 다음과 같습니다.
+															<br>
+															<div align="center"><a href="#" class="bordered-feature-image"><img src="images/4.11.PNG"  style="width:300px; height:auto"  alt="" /></div><div align="center">
+																Fig 11. 퓨리에 변환식 </div></a>
+															<br>
+															<br> 이제 여기에 sinc(cardinal sine)함수를 도입해 보겠습니다.
+															<br>
+															<br>
+															<div align="center"><a href="#" class="bordered-feature-image"><img src="images/4.12.PNG"  style="width:800px; height:auto"  alt="" /></div><div align="center">
+																Fig 12. sinc 함수 도입 </div></a>
+															<br>
+															<br> 그렇다면 이 sinc함수의 역변환은 어떨까요?
+															<br>그래프를 보니 pi*x=0이 될 때, sinc함수값이 1이 되었습니다.
+															<br>
+															<br>결국, 주파수= pi/주기 입니다.
+															<br>따라서 기본주파수에 주기가 늘어난다면? 짜부러진 그래프의 모양이 될 것입니다.
+															<br>
+															<br>예를 들어, 만약 주기가 없는 상수만의 그래프를 주파수 영역으로 옮긴다면 어떻게 될까요?
+															<br>
+															<br>답은 주파수는 없고 크기는 무한대인 impulse 형태로 나올 것입니다.
+															<br>
+															<br>
+															<br>
+															<br>
+
 														</p>
 
 											<p>
