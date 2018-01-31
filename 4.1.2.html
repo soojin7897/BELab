@@ -1,0 +1,405 @@
+<!DOCTYPE HTML>
+<!--
+	Halcyonic by HTML5 UP
+	html5up.net | @ajlkn
+	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+-->
+<html>
+	<head>
+		<title>Seizure Signal Analysis</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+		<!--[if lte IE 8]><script src="assets/js/ie/html5shiv.js"></script><![endif]-->
+		<link rel="stylesheet" href="assets/css/main.css" />
+		<!--[if lte IE 9]><link rel="stylesheet" href="assets/css/ie9.css" /><![endif]-->
+		<script src="http://code.jquery.com/jquery-latest.min.js"></script>
+		<style>
+		.toggle{
+   	color : red;
+	  }
+</style>
+	</head>
+	<body class="subpage">
+
+		<div id="page-wrapper">
+
+			<!-- Header -->
+				<div id="header-wrapper">
+					<header id="header" class="container">
+						<div class="row">
+							<div class="12u">
+
+								<!-- Logo -->
+									<h1><a href="index.html" id="logo">SJ's BE Lab</a></h1>
+
+								<!-- Nav -->
+									<nav id="nav">
+										<a href="index.html">Homepage</a>
+										<a href="threecolumn.html">My Diary</a>
+										<a href="signalsystem1.html">Study</a>
+										<a href="onecolumn.html">Project</a>
+										<a href="twocolumn1.html">ETC</a>
+									</nav>
+
+							</div>
+						</div>
+					</header>
+				</div>
+
+			<!-- Content -->
+				<div id="content-wrapper">
+					<div id="content">
+						<div class="container">
+							<div class="row">
+								<div class="9u 12u(mobile)">
+
+									<!-- Main Content -->
+										<section>
+											<header>
+												<h2>4.1 Seizure Detection</h2>
+												<h3>4.1.1 Adult Seizure Detection</h3>
+											</header>
+											<p>
+												클리닉에서, 의료적으로 다루기 어려운 부분간질환자의 경우, 흔히 자발적 발작성의, 시간이 많이 걸리는 비디오-EEG 감시(monitoring)가 필요하다[11].
+												<br>그러나 내장형 EEG의 시각적 분석은 시간을 많이 소비한다. 발작 신호를 감시하고 간질 구역을 식별하기 위한 침습적(invasive) 방법을 적용하는 것은 위험하며,
+												환자에게 위험을 일으킬 수 있다.[그래서 시간소모 및 위험을 줄이기 위해, 자동화된 발작감지 시스템이 필요하며] <br>자동화된 발작 감지 시스템을 설계하기 전에, 발작 전/도중/ 후의 EEG신호의
+												특성을 판단하고 평가해야 한다.
+											</p>
+										 <!--<h3><span style="color:red"><li>1.1 History</li></span></h3>-->
+											<p>
+												<br>이 기능을 더 잘 설명하기 위해 몇 가지 기능이 식별되어 왔다.
+												<br>이는 짧은 시간동안 신호 에너지와 같은 신호의 정적인 행동 혹은 발작이 시작되는 동안 주파수의 변화와 혼란함 같은 신호의 역동적인 행동을 보여줄 지도 모른다.
+												자동적인 발작감지 정량화와 인식은 1970년대부터 임상, 물리학, 공학 공동체 내에서 흥미로운 연구 분야였다[14–27].
+												<br>스파이크(spike) 검출[16,21-23]에서의 초기 작업에서는 상대 진폭, 선명도 및 EEG파장의 지속 시간과 같은 여러 파라미터를 EEG신호로부터 측정하여 평가했다.
+												이 방법은 다양한 잡파(artifact)에 민감하다.
+												이러한 시도에서 능동적 각성(깨어있음) 또는 비동기EEG와 같은 다양한 상태가 정의되었으며, 이로 인해 대표적으로 일시적인 비간질성 현상을 발생할 것으로 예상된다[22,23].
+												<br> ◆스파이크(spike)와 잡파(artifact)란,
+												<br>spike는 EEG에서 측정하는 중요한 신호 중 하나이며,
+												<br>artifact는 보통 EEG뇌파는 매우 약한 대뇌의 전위를 증폭시켜서 뇌파로 보여주는데 이 때 다른 미약한 신호도 증폭되어 나타난다.
+												따라서 대뇌 전위 이외의 증폭된 신호를 잡파(artifact)라고 할 수 있다.
+											</p>
+
+											<p>
+												EEG로부터 간질 활동을 탐지하기 위한 다단계 시스템이 Dingle 외 연구진[18]에 의해 개발되었다.
+												<br>연구진들은 모방적 접근법과 규칙 기반의 전문가 시스템(rule-based expert system)을 결합시켰고, 그에 따라 시·공간적인 시스템을 고려하고 이용했다.
+												<br>또 다른 접근법[19]에서는 다중 채널 EEG가 사용되었으며, 근육 잡파(artefacts)를 줄이기 위해 상관 알고리즘이 시도되었다. 이 방법을 사용하면 스파이크(spike) 중 약 67%를 탐지할 수 있다.
+												심전도, 근전도 및 전기 치료 정보를 포함한 다중 채널과 공간 정보를 규칙 기반 시스템(rule-based system)[20]에 통합하여 더 높은 검출 속도를 달성했다.
+
+											</p>
+
+											<p>
+												2단계 자동화 시스템은 Daveyetal 외 연구진[17]이 개발했다.
+												<br>첫 번째 단계에서 특징 추출기와, 두 번째 단계에서 분류기가 도입되었다. 이 시스템에 70%의 민감도가 요구되었다.
+											</p>
+											<p>
+												많은 연구자들이 발작을 감지하기 위한 인공 신경 네트워크(ANN)를 사용해 왔다[26,28].
+												<br>Kohonen 자체 구조화 특징 맵(ANN)[29,30]은 Kurthetal 외 연구진들[28]의 스파이크 검출에 사용되었다. 본 연구에서는 각 환자에 대해 3개의 다른 특성을 지닌 신경 네트워크(NNs)가 조사되었다.
+												훈련 벡터에는 전형적인 스파이크가 있는 수많은 신호, 눈 깜빡임 잡파(artefacts) 신호, 근육 잡파(artefacts) 신호 및 Background EEG 신호가 포함된다.
+												<br>이러한 방법의 주요 문제점은 간질 발작 신호가 이와 유사한 패턴을 따르지 않는다는 것이다. 반면, 모든 유형의 발작 패턴을 ANN에 보여 주면 전체적인 감지 시스템의 민감도가 감소한다.
+												<br> 따라서 강력한 분류기에 따른 지능적인 기능 감지는 종종 향상된 결과를 제공한다.(아마 기계학습 혹은 딥러닝을 통해서 성능이 향상된다는 것을 말하는 듯)
+											</p>
+											<p>
+												최근 작업 중에서, 시간/주파수(TF)접근 방식은 발작 진원지(source)가 시간/주파수 영역에 국한된다는 사실을 효과적으로 사용한다.
+												<br>이러한 대부분의 방법은 주로 다른 유형의 신경 스파이크를 감지하기 위한 것이다.
+												다른 분류 전략에 따른 TF방법은 이 분야의 많은 연구원[32,33]에 의해 제안되어왔다. EEG신호가 통계적으로 비정상이기(nonstationary) 때문에 이 방법은 특히 유용하다.
+												<br>이산 주파수 변환(DWT)은 다계층적(다단계)특성으로 인해 단기간 퓨리에 변환을 기반으로 한 TF보다 더 나은 TF를 보여준다.
+												<br>즉, 신호의 거친 정도에 따라 신호를 모델링 할 수 있다. DWT는 신호를 대략적인 근사 및 세부 정보로 분류하여 서로 다른 분해능으로 다양한 주파수 대역에 걸쳐 신호를 분석한다.
+												<br>Subasi[33]가 최근에 접근할 때, ANN에 따른 TF방식기반 DWT방식이 제안되었다.
+												<br>ANN은 다양한 분해능(상세)레벨의 에너지를 분류한다.
+												이 기술을 사용하면 성인 간질 발작의 80%이상을 감지할 수 있다. pseudo-Wigner–Ville와 같은 다른 TF 방식의 기여도 동일한 목적으로 사용가능하다[34].
+											</p>
+											<p>
+												Osorioetal 외 연구진[35,36]에 의해 확립된 연구에서,
+												디지털 발작 검출 알고리즘(digital seizure detection algorithm)이 제안되고 구현되었다.
+												<br>이 시스템은 정확한 실시간 검출, 정량적 분석 및 임상적 발작의 시작을 단기간에 예측할 수 있다.
+												이 시스템은 특정 길이의 짧은(약 2초) 윈도우(windows) 에서 8Hz와 42Hz사이의 주파수에 있는 신호 에너지의 중앙값(메디안)의 Foreground 즉'전경'(foreground) 측정을 계산한다.
+												<br>◆ windows란
+												<br>feature를 추출하기 위한 구간으로써 여기서는 임의적인 주파수 축을 의미한다.
+
+										 </p>
+
+										 <p>
+											 ※전경(foreground)은 다음의 단계를 통해 계산된다.
+											 <br>1) 8에서 40 Hz로부터 주파수하위대역을  분리하는 22계수 웨이블릿 필터(DAUB4, 레벨 3)를 사용하여 간질 발작 (간질 발작 포함) 및 비 간질 발작 (발작 없이)으로 신호를 분해한다.
+											 <br>2)간질성 성분이 제곱된다.
+											 <br>3)제곱된 구성 성분은 여과된(filtered)중앙값이다.
+											 <br>반면에,'background'기준 신호는 신호의 중간 에너지를 더 오랜 시간(약 30분)으로 추정하여 구한다.
+											 그러면 전경과 배경 사이의 큰 비율이 발작[37]을 보여 줄 것이다. 아날로그 시스템은 이후 속도 및 노이즈[37]와 같은 위 시스템의 기술적 단점을 개선하기 위해 개발되었다.
+											 간질 발작을 감지하기 위해 EEG에서 측정되거나 감지할 수 있는 여러 가지 특징이 있다.
+											 <p><span class="toggle">발작이 시작되는 동안, 신호의 평균 에너지를 증가시킨다. 신호의 윈도우 분할의 경우, 다음과 같이 측정할 수 있다.</span></p>
+											 <!--<h3><span style="color:red"><li>1.1 History</li></span></h3>-->
+											 <div align="center"><a href="#" class="bordered-feature-image"><img src="EEGimages/4.1.PNG" style="width:300px; height:auto"  alt="" />
+												 Fig 4.1 신호의 windows분할 시, 측정 공식 </div></a>
+												 <br><span class="toggle">여기서 L은 window 길이이고, 시간 색인 n은 윈도우 중앙값이다. 발작 신호는 주요 주기 성분을 가진다
+												 <br>따라서 일반적으로 주파수 영역에서 우세한 피크를 보인다. 그러나 이 피크의 주파수는 발작이 시작되는 동안, 시간과 함께 감소한다.
+												 <br>그러므로 감소의 기울기는 발작 일으킴을 감지하는데 중요한 요소이다. X(f, n)를 고려하면, n에 중심에 있는 윈도우 신호 x(n)의 추정 스펙트럼은 n시간에 정점이 찍을 것이다.</span>
+												 <div align="center"><a href="#" class="bordered-feature-image"><img src="EEGimages/4.2.PNG" style="width:300px; height:auto"  alt="" />
+													Fig 4.2 X(f, n)를 고려하면, n에 중심에 있는 윈도우 신호 x(n)의 추정 스펙트럼은 n시간에 정점을 찍음 </div></a>
+													<br> 스펙트럼은 대개 자동회귀(autoregressive) 모델링을 사용해 추정한다[38].
+													<br>스펙트럼에서 주파수 정점이 측정된다. 주파수 정점에서 감소 기울기를 측정하여 특징으로 사용할 수 있다. EEG신호의 주기적인 특성은 또한 측정될 수 있으며 발작의 징후로 사용될 수 있다.
+													이는 데이터의 특정한 상위 순서 통계를 통합하여 가장 잘 식별할 수 있다. 그러한 지표 중 하나는 다음과 같은 측정의 2차 및 4차 통계와 관련이 있다[39].
+													<div align="center"><a href="#" class="bordered-feature-image"><img src="EEGimages/4.3.PNG" style="width:300px; height:auto"  alt="" />
+ 													Fig 4.3 측정의 2차, 4차 통계 </div></a>
+													<br>
+													<div align="center"><a href="#" class="bordered-feature-image"><img src="EEGimages/4.4.PNG" style="width:700px; height:auto"  alt="" />
+ 													Fig 4.4 제로지연(zero-lag)에서 4차 주기의 푸리에 계수 </div></a>
+													<br>◆여기서 제로지연(zero-lag)은 수학적으로 용이한 계산을 위해, 장비 지연으로 발생할 수 있는 복잡함을 단순하게 표현하기 위해.
+													<br>
+													<div align="center"><a href="#" class="bordered-feature-image"><img src="EEGimages/4.5.PNG" style="width:700px; height:auto"  alt="" />
+ 													Fig 4.5 추정치 계산  </div></a>
+													<br>또한 이 표시기(indicator)는 시간 색인 n과 관련하여 측정된다. 이는 n에 중심을 둔 각 신호 윈도우에 대해 계산되기 때문이다.
+													<br>I(4.3참고)항에 측정한 것으로, n에 중심을 맞춘 프레임에 대한 에너지의 확산, 발작이 시작되기 전 주파수 범위에 걸쳐 EEG는 혼란스럽고 어떤 주파수도 그 추적을 통제하지 못하는 것처럼 보인다.
+													발작이 일어나는 동안, EEG는 리드미컬하게, 질서 정연하게 되며, 따라서 이 스펙트럼에는 큰 정점이 있다.
+													<br>위의 기능은 지원 벡터 머신(SVM)분류기를 사용하여 측정하고 분류된다[38]. 강직간대발작(tonic–clonic) 및 복잡한 부분발작 모두에서 분류율이 100%까지 높을 수 있다는 것이 밝혀졌다.
+													그러나 발작의 강한 탐지에서, EEG의 모든 통계적 조치는 혈액 형태학, 몸의 움직임, 고통, 신진대사의 변화, 심박 수의 가변성, 발작 전후의 호흡과 같은 다른 증상과 함께 정량화되고 효과적으로 고려해야 한다.
+													<br>이는 미래의 신호 처리/데이터 융합에 기반한 접근 방식에 대한 도전이다. 이것은 또 다른 발작을 감지하기 위한 시도로 인공 신경 네트워크(ANN)를 기반으로 한 폭포(cascade) 분류기가 사용되어 왔다[40].
+										 </p>
+										 <p>
+											 <br>※분류는 세 단계로 수행된다.
+											 <br>첫 번째 단계에서,
+											 <br>다음 6개의 기능은 피크를 정확한 간질 형태/정확한 비간질 파형/알 수 없는 파형으로 분류하기 위하여, 2개의 perceptrons를 제공한다. 기능은 그림 4.2에 묘사된 것과 같은 간질 스파이크의 예상 형태에 따라 선택된다.
+											 <br>
+											 	<br>이러한 기능은 다음과 같다.
+												<br>(a) first half-wave amplitude (FHWA),
+												<br>(b) second half-wave amplitude (SHWA),
+												<br>(c) first half-wave duration (FHWD),
+												<br>(d) second half-wave duration (SHWD),
+												<br>(e) first half-wave slope (FHWS ≈ FHWA/FHWD), and
+												<br>(f) second half-wave slope (SHWS ≈ SHWA/SHWD).
+												<div align="center"><a href="#" class="bordered-feature-image"><img src="EEGimages/4.6.PNG" style="width:500px; height:auto"  alt="" />
+												Fig 4.6 간질 및 비간질 발작의 분류에 사용되는 특징과 함께 간질성 스파이크를 가짐[An epileptiform spike with features used in the classification of epileptic and nonepileptic seizures]  </div></a>
+												<br>첫 번째 단계(=전처리(preclassifier))이후에 3개의 출력이 필요하기 때문에 두개의 단일 층(perceptrons)이 병렬로 사용된다.
+												<br>1개의 perceptron은 명확한 비간질 형태를 위해, +1을 주도록 훈련 받고 그렇지 않은 경우−1을 준다. 두 번째 네트워크는 확실한 간질 모양을 위해 +1을 생성하며, 그렇지 않은 경우에는 −1을 생성한다.
+												두 네트워크의 출력에서−1을 생성하는 세그먼트는 알 수 없는 그룹에 할당된다.
+												<br>k의 반복 작업에서 perceptron/ANN의 Weight 벡터인 w를 찾는 업데이트 방정식은 다음과 같이 간단하게 제시할 수 있다.
+												<div align="center"><a href="#" class="bordered-feature-image"><img src="EEGimages/4.7.PNG" style="width:300px; height:auto"  alt="" />
+												Fig 4.7 w(weight)를 찾는 업데이트 방적식</div></a>
+												<br>여기서 x는 입력 feature 벡터, d는 예상된 feature 벡터, y는 출력값으로써,
+												<br>즉 y=sign(wTx − Tr)로 계산되는 출력이며, Tr는 실증적인 임계값, u(우타)는 learning rate이다.
+												<br>두 번째 단계에서 알 수 없는 파형(spike)은 방사형 기준 함수(RBF)신경 네트워크를 사용하여 분류된다.
+												RBF은 실증적으로 이 분류 단계에 대한 다른 ANNs보다 더 나은 성능을 가지고 있는 것으로 나타났다. 입력값들은 실제 파형의 세그먼트들이다. 출력 값은(정규화 후)마지막 계층의 출력을 제한함으로써 선택된다.
+												<br>마지막으로, 세 번째 단계에서 비선형(RBF)커널이 있는 다차원 SVM을 이용하여 멀티채널 입력으로부터 데이터를 처리하기 위해 사용된다.
+												일반화된 대부분의 초점 발작(focal seizures)을 감지하기 위해 최대 100%의 정확도가 보고되었다[40].
+												<br>간질성은 종종 뇌의 정상적인 작동을 방해하는 상대적으로 큰 뇌신경 네트워크 내에서 갑자기 발생하는 동기식 활동으로 특징짓는다.
+												따라서 동적 변화의 몇 가지 측정도 발작을 감지하기 위해 사용되었다. 이러한 조치들은 발작 전과 발작 상태 사이의 전이 또는 발작과 발작 상태 사이의 전환에서도 현저하게 변화한다.
+												<br>후자의 경우에, 전이는 내측두엽간질MTLE(mesial temporal lobe epilepsy)의 경우와 같이 지속적인 위상 변화 또는 급격한 도약 (예 : 갑상선 기능 항진증)으로 발생할 수 있다.(예: 결신발작(absence seizures)의 경우에도)
+												<br>◆내측두엽간질(MTLE)란,
+												<br> 흔히 5세 이하에서 열성발작이 있었으며 10세 전후 또는 청소년기에 발작이 나타나기 시작하여 발생초기는 비교적 약물네 잘 조절되나 점차 진행하여 항간질약에 반응하지 않는 난치성 간질발작으로 넘어가기 쉬움.
+										 </p>
+										 <p>
+											 이 장의 후반부에 설명한 바와 같이, attractor 차원 추정에 의한 혼잡한 측정에 기초한 접근 방식에서,
+											 	<br> 첫 번째 경우에는 시스템의 끌어당기는 힘이 점점 발작에서 발작 attractor로 변형 된다.
+						 				 		<br> 두 번째 경우에, 급격한 임계 전환이 발생하는 경우, 시스템에는 항상 최소 2개의 동시 발작상태와 발작 attractor가 있다고 가정할 수 있다.
+										 		<br>Lopes da Silva 외 연구진[41]의 연구에서 3개의 상태(경로)는 간질 발작 모델의 설명함으로써 특징지을 수 있다:
+												<br>
+												<br>1. 무작위 섭동(=교란)으로 인한 분기 유형의 갑작스런 전환이 발생했다. 이러한 간질증후군의 흥미로운 예는 EEG와 경련 없는 간질부재유형의 발작에서 발작성의 극서파결합(spike-and wave)방전으로 특징짓는다.
+												<br>2. 외부섭동 (감광성간질photosensitive epilepsy)에 의해 attractor 변형이 일어나는 경로.
+												<br>3. 발작 상태로의 점진적인 진화를 유도하는 attractor의 변형. (예: 측두엽 간질temporal lobe epilepsy (TLE))
+												<br>
+												<br>◆극서파결합(spike-and wave),
+												<br>돌발성 이상 뇌파의 일종이다. 극파와 2~5Hz의 서파가 결합한 것.
+												<br>◆섭동 이란,
+												<br>교란 혹은 미세한 변화
+										 </p>
+										 <p>
+											 저자들은 이러한 경로에서 현재(발작의)활동 모드에서 ictal(발작)모드로의 전환이 예상되거나 예상되지 않을 수 있는 상황을 이해할 수 있다고 결론 내렸다.
+											 <br>또한, 세 가지 경로 중 어떤 것도 가능한데, 기본 간질의 종류에 따라 달라진다. 발작의 대부분은 고유의 전신 간질 부재유형의 발작, 또는 예측 가능한 역동성의 점진적인 변화에 앞서 단지 얼마간 감지할 수 있듯이,
+											 TLD같은 발작을 보이기 전에는 대개 예측할 수 없는 것일지도 모른다.
+											 <br>EEG의 불안 행동은 섹션 4.3에서 논하며 주로 새로운 연구 방향으로 발작의 예측에 활용된다.
+										 </p>
+
+
+											<h3><span style="color:red"><li>References</li></span></h3>
+											<p>
+
+												<br>[11] Kanner, A. M., Morris, H. H., Luders, H. O., Dinner, D. S., Van Ness, P., and Wyllie, E., ‘Usefulness of unilateral interictal sharp waves of temporal lobe origin in prolonged video EEG monitoring studies, Epilepsia, 34, 1993, 884–889.
+												<br>[14] Walter, D. O., Muller, H. F., and Jell, R. M., ‘Semiautomatic quantification of sharpness of EEG phenomenon’, IEEE Trans. Biomed. Engng., BME-20, 1973, 53–54.
+												<br>[15] Ktonas, P. Y., and Smith, J. R., ‘Quantification of abnormal EEG spike characteristics’, Comput. Biol. Med., 4, 1974, 157–163.
+												<br>[16] Gotman, J., and Gloor, P., ‘Automatic recognition and quantification of interictal epileptic activity in the human scalp EEG’, Electroencephalogr. Clin. Neurophysiol., 41, 1976, 513–529.
+												<br>[17] Davey, B. L. K., Fright, W. R., Caroll, G. J., and Jones, R. D., ‘Expert system approach to detection of epileptiform activity in the EEG’, Med. Biol. Engng. Computing, 27, 1989, 365–370.
+												<br>[18] Dingle, A. A., Jones, R. D., Caroll, G. J., and Fright, W. R., ‘A multistage system to detect epileptiform activity in the EEG’, IEEE Trans. Biomed. Engng., 40, 1993, 1260–1268.
+												<br>[19] Glover, J. R. Jr., Ktonas, P. Y. Raghavan, N. Urunuela, J. M. Velamuri, S. S., and Reilly, E. L., ‘A multichannel signal processor for the detection of epileptogenic sharp transients in the EEG’, IEEE Trans. Biomed. Engng., 33, 1986, 1121–1128.
+												<br>[20] Glover Jr., J. R., Raghavan, N. Ktonas, P. Y. and Frost, J. D., ‘Context-based automated detection of epileptogenic sharp transients in the EEG: elimination of false positives’, IEEE Trans. Biomed. Engng., 36, 1989, 519–527.
+												<br>[21] Gotman, J., Ives, J. R., and Gloor, R., ‘Automatic recognition of interictal epileptic activity in prolonged EEG recordings’, Electroencephalogr. Clin. Neurophysiol., 46, 1979, 510–520.
+												<br>[22] Gotman, J. and Wang, L. Y., ‘State-dependent spike detection: concepts and preliminary results’, Electroencephalogr. Clin. Neurophysiol., 79, 1991, 11–19.
+												<br>[23] Gotman, J. and Wang, L. Y., ‘State-dependent spike detection: validation’, Electroencephalogr. Clin. Neurophysiol., 83, 1992, 12–18.
+												<br>[24] Ozdamar, O., Yaylali, I., Jayakar, P., and Lopez, C. N., ‘Multilevel neural network system for EEG spike detection’, in Computer-Based Medical Systems, Proceedings of the 4th Annual IEEE Symposium, Eds I. N. Bankmann and J. E. Tsitlik, IEEE Computer Society, Washington DC, 1991.
+												<br>[25] Webber, W. R. S., Litt, B., Lesser, R. P., Fisher, R. S., and Bankman, I., ‘Automatic EEG spike detection: what should the computer imitate’, Electroencephalogr. Clin. Neurophysiol., 87, 1993, 364–373.
+												<br>[26] Webber, W. R. S., Litt, B., Wilson, K., and Lesser, R. P., ‘Practical detection of epileptiform discharges (EDs) in the EEG using an artificial neural network: a comparison of raw and parameterized EEG data’, Electroencephalogr. Clin. Neurophysiol., 91, 1994, 194–204.
+												<br>[27] Wilson, S. B., Harner, R. N., Duffy, B. R., Tharp, B. R., Muwer, M. R., and Sperling, M. R., ‘Spike detection. I. Correlation and reliability of human experts’, Electroencephalogr. Clin. Neurophysiol., 98,ㅠ 1996, 186–198.
+												<br>[28] Kurth, C., Gilliam, F., and Steinhoff, B. J., ‘EEG spike detection with a Kohonen feature map’, Ann. Biomed. Engng., 28, 2000, 1362–1369.
+												<br>[29] Kohonen, T., ‘The self-organizing map’, Proc. IEEE, 78(9), 1990, 1464–1480.
+												<br>[30] Kohonen, T., The Self-Organizing Maps, 2nd edn, Springer, New York, 1997.
+												<br>[31] Nenadic, Z., and Burdick, J. W., ‘Spike detection using the continuous wavelet transform’, IEEE Trans. Biomed. Engng., 52(1), January 2005, 74–87.
+												<br>[32] Boashash, B., Mesbah, M., and Colditz, P., ‘Time frequency Analysis’, Chapter 15, Article 15.5, Elsevier Science & Technology, UK, 2003, pp. 663–669.
+												<br>[33] Subasi, A., ‘Epileptic seizure detection using dynamic wavelet network’, Expert Systems with Applic., 29, 2005, 343–355.
+												<br>[34] Lutz, A., Lachaux, J-P., Martinerie, J., and Varela, F. J., ‘Guiding the study of brain dynamics by using first-person data: synchrony patterns correlate with ongoing conscious states during a simple visual task’, Proc. Natl Acad. Sci., 99(3), 2002, 1586–1591.
+												<br>[35] Osorio, I., ‘System for the prediction, rapid detection, warning, prevention, or control of changes in activity states in the brain of subject’, US Patent 5995868, November 1999.
+												<br>[36] Osorio, I., Frei, M. G., and Wilkinson, S. B., ‘Real-time automated detection and quantitative analysis of seizures and short-term prediction of clinical onset’, Epilepsia, 39(6), 1998, 615–627.
+												<br>[37] Bhavaraju, N. C., Frei, M. G., and Osorio, I., ‘Analogue seizure detection and performance evaluation’, IEEE Trans. Biomed. Engng., 53(2), February 2006, 238–245.
+												<br>[38] Gonzalez-Vellon, B., Sanei, S., and Chambers, J., ‘Support vector machines for seizure detection’, in Proceedings of the ISSPIT, Darmstadt, Germany, 1993, pp. 126–129.
+												<br>[40] Acir, N., Oztura, I. Kuntalp, M., Baklan, B., and Guzelis, C., ‘Automatic detection of epileptiform events in EEG by a three-stage procedure based on artificial neural network’, IEEE Trans. Biomed. Engng., 52(1), January 2005, 30–40.
+
+											</p>
+
+											<p>
+												<div id="disqus_thread"></div>
+												<script>
+
+												<!-- 글자색  계속 바뀌는 토글 -->
+												$(document).ready(function(){
+														setColor();
+ 												})
+ 												var color = 1;
+ 											  function setColor(){
+													setTimeout(function(){
+			 											if(color == 1){
+															color = 0;
+															$(".toggle").css("color","green");
+															}else{
+															color = 1
+															$(".toggle").css("color","blue");
+
+			 											}
+			 										setColor()
+												},1000);
+ 											}
+												/**
+												*  RECOMMENDED CONFIGURATION VARIABLES: EDIT AND UNCOMMENT THE SECTION BELOW TO INSERT DYNAMIC VALUES FROM YOUR PLATFORM OR CMS.
+												*  LEARN WHY DEFINING THESE VARIABLES IS IMPORTANT: https://disqus.com/admin/universalcode/#configuration-variables*/
+												/*
+												var disqus_config = function () {
+												this.page.url = PAGE_URL;  // Replace PAGE_URL with your page's canonical URL variable
+												this.page.identifier = PAGE_IDENTIFIER; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
+												};
+												*/
+												(function() { // DON'T EDIT BELOW THIS LINE
+												var d = document, s = d.createElement('script');
+												s.src = 'https://https-soojin7897-github-io-belab-index-html.disqus.com/embed.js';
+												s.setAttribute('data-timestamp', +new Date());
+												(d.head || d.body).appendChild(s);
+												})();
+												</script>
+												<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+
+											</p>
+										</section>
+
+								</div>
+								<div class="3u 12u(mobile)">
+
+									<!-- Sidebar -->
+										<section>
+											<header>
+												<h2>Paper List</h2>
+											</header>
+											<ul class="link-list">
+												<li><a href="introduction.html">Introduction</a></li>
+												<li><a href="4.1.html">4.1 Seizure Detection</a></li>
+												<li><a href="4.1.2.html">4.1.2 Detection of Neonate Seizure</a></li>
+												<li><a href="4.2.html">4.2 Chaotic Behaviour of EEG Sources</a></li>
+												<li><a href="4.3.html">4.3 Predictability of Seizure from the EEGs</a></li>
+												<li><a href="4.4.html">4.4 Fusion of EEG-fMRI Data for Seizure Prediction</a></li>
+												<li><a href="4.5.html">4.5 Summary and Conclusions</a></li>
+											</ul>
+										</section>
+										<section>
+											<header>
+												<h2>Today's Word</h2>
+											</header>
+											<p>
+												이 논문을 이해하기 위해서 중요한 단어들 수록
+											</p>
+											<ul class="link-list">
+												<li><span style="color:blue">invasive 침습, 뇌공학에서 중요한 단어 중 하나이며, 뇌를 개복하여 공학장치를 뇌 내(內)에 삽입</span></li>
+												<li><span style="color:blue">noninvasive 침습, 뇌공학에서 중요한 단어 중 하나이며, 뇌를 절개하지 않고, 내 외(外)에서 뇌파측정 등 EEG에서 주로 쓰임</span></li>
+												<li><span style="color:blue">spike EEG 검출신호 중 하나</span></li>
+												<li><span style="color:blue">artefact 잡파</span></li>
+												<li><span style="color:blue">Background EEG</span></li>
+												<li><span style="color:blue">Foreground EEG</span></li>
+												<li><span style="color:blue">Stationary 정상 </span></li>
+												<li><span style="color:blue">nonstationary 비정상</span></li>
+												<li><span style="color:blue">DWT 기존 퓨리에 변환보다 성능이 더 좋은 퓨리에 변환</span></li>
+												<li><span style="color:blue">Windows feature를 추출하기 위한 구간으로써 여기서는 임의적인 주파수 축을 의미 </span></li>
+												<li><span style="color:blue">zero-lag 제로지연</span></li>
+												<li><span style="color:blue">focal seizure 초점발작</span></li>
+											</ul>
+
+										</section>
+
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+
+			<!-- Footer -->
+			<div id="footer-wrapper">
+				<footer id="footer" class="container">
+					<div class="row">
+						<div class="8u 12u(mobile)">
+
+							<!-- Links -->
+								<section>
+									<h2> Sites related my study.</h2>
+									<div>
+										<div class="row">
+											<div class="3u 12u(mobile)">
+												<ul class="link-list last-child">
+													<li><a href="http://klinear.tistory.com">김선형 : 정보보호 공부</a></li>
+												</ul>
+											</div>
+											<div class="3u 12u(mobile)">
+												<ul class="link-list last-child">
+													<li><a href="http://blog.naver.com/PostView.nhn?blogId=ldj1725&logNo=220419060424">새벽: Signal System</a></li>
+												</ul>
+											</div>
+											<div class="3u 12u(mobile)">
+												<ul class="link-list last-child">
+													<li><a href="https://laonple.blog.me/220914873095">라온피플:머신러닝</a></li>
+												</ul>
+											</div>
+											<div class="3u 12u(mobile)">
+												<ul class="link-list last-child">
+													<li><a href="https://blog.naver.com/hafs_snu/220862506048">공부하는 대학생들</a></li>
+												</ul>
+											</div>
+										</div>
+									</div>
+								</section>
+
+						</div>
+						<div class="4u 12u(mobile)">
+
+							<!-- Blurb -->
+								<section>
+									<h2>Another My Blog</h2>
+									<p>
+										Study of My undergraduate's degree:
+										<a href="https://blog.naver.com/soojin7897">
+											<br>RedCoder를 위하여</a>
+									</p>
+								</section>
+
+						</div>
+					</div>
+				</footer>
+			</div>
+
+		<!-- Copyright -->
+			<div id="copyright">
+				Copyright 2018. BSJ All rights reserved.
+			</div>
+
+	</div>
+
+	<!-- Scripts -->
+		<script src="assets/js/jquery.min.js"></script>
+		<script src="assets/js/skel.min.js"></script>
+		<script src="assets/js/skel-viewport.min.js"></script>
+		<script src="assets/js/util.js"></script>
+		<!--[if lte IE 8]><script src="assets/js/ie/respond.min.js"></script><![endif]-->
+		<script src="assets/js/main.js"></script>
+
+</body>
+</html>
