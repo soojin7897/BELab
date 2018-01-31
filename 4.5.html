@@ -1,0 +1,223 @@
+<!DOCTYPE HTML>
+<!--
+	Halcyonic by HTML5 UP
+	html5up.net | @ajlkn
+	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+-->
+<html>
+	<head>
+		<title>Seizure Signal Analysis</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+		<!--[if lte IE 8]><script src="assets/js/ie/html5shiv.js"></script><![endif]-->
+		<link rel="stylesheet" href="assets/css/main.css" />
+		<!--[if lte IE 9]><link rel="stylesheet" href="assets/css/ie9.css" /><![endif]-->
+		<script src="http://code.jquery.com/jquery-latest.min.js"></script>
+		<style>
+		.toggle{
+   	color : red;
+	  }
+</style>
+	</head>
+	<body class="subpage">
+
+		<div id="page-wrapper">
+
+			<!-- Header -->
+				<div id="header-wrapper">
+					<header id="header" class="container">
+						<div class="row">
+							<div class="12u">
+
+								<!-- Logo -->
+									<h1><a href="index.html" id="logo">SJ's BE Lab</a></h1>
+
+								<!-- Nav -->
+									<nav id="nav">
+										<a href="index.html">Homepage</a>
+										<a href="threecolumn.html">My Diary</a>
+										<a href="signalsystem1.html">Study</a>
+										<a href="onecolumn.html">Project</a>
+										<a href="twocolumn1.html">ETC</a>
+									</nav>
+
+							</div>
+						</div>
+					</header>
+				</div>
+
+			<!-- Content -->
+				<div id="content-wrapper">
+					<div id="content">
+						<div class="container">
+							<div class="row">
+								<div class="9u 12u(mobile)">
+
+									<!-- Main Content -->
+										<section>
+											<header>
+												<h2>4.5 Summary and Conclusions</h2>
+
+											</header>
+											<p>
+												<br>특히 성인 발작을 감지하기 위해 다양한 기술을 사용하는 간질 발작의 탐지는 성공적이었다.
+												<br>그러나 신생아의 발작 탐지를 위한 허위 경보 비율은 여전히 너무 높으며, 따라서 신뢰할 수 있는 신생아 발작 탐지 시스템의 설계는 여전히 미해결 과제로 남아있다.
+												<br>반면에, 비록 EEG(두피와 두개(골) 내(內)의)로부터의 발작의 가능성을 예측할 수 있지만, 정확도를 높이기 위해서는 더 많은 연구가 필요하다.
+												다양한 신경 촬영 방식의 융합(Fusion of different neuroimaging modelity)은 좀 더 신뢰할만한 발작 감지와 예측시스템을 위한 길을 열어 줄지도 모른다.(아마 하이브리드 뇌를 말하는 것 같음)
+											</p>
+										 <!--<h3><span style="color:red"><li>1.1 History</li></span></h3>-->
+
+
+
+
+											<p>
+												<div id="disqus_thread"></div>
+												<script>
+
+												<!-- 글자색  계속 바뀌는 토글 -->
+												$(document).ready(function(){
+														setColor();
+ 												})
+ 												var color = 1;
+ 											  function setColor(){
+													setTimeout(function(){
+			 											if(color == 1){
+															color = 0;
+															$(".toggle").css("color","green");
+															}else{
+															color = 1
+															$(".toggle").css("color","blue");
+
+			 											}
+			 										setColor()
+												},1000);
+ 											}
+												/**
+												*  RECOMMENDED CONFIGURATION VARIABLES: EDIT AND UNCOMMENT THE SECTION BELOW TO INSERT DYNAMIC VALUES FROM YOUR PLATFORM OR CMS.
+												*  LEARN WHY DEFINING THESE VARIABLES IS IMPORTANT: https://disqus.com/admin/universalcode/#configuration-variables*/
+												/*
+												var disqus_config = function () {
+												this.page.url = PAGE_URL;  // Replace PAGE_URL with your page's canonical URL variable
+												this.page.identifier = PAGE_IDENTIFIER; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
+												};
+												*/
+												(function() { // DON'T EDIT BELOW THIS LINE
+												var d = document, s = d.createElement('script');
+												s.src = 'https://https-soojin7897-github-io-belab-index-html.disqus.com/embed.js';
+												s.setAttribute('data-timestamp', +new Date());
+												(d.head || d.body).appendChild(s);
+												})();
+												</script>
+												<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+
+											</p>
+										</section>
+
+								</div>
+								<div class="3u 12u(mobile)">
+
+									<!-- Sidebar -->
+										<section>
+											<header>
+												<h2>Paper List</h2>
+											</header>
+											<ul class="link-list">
+												<li><a href="introduction.html">Introduction</a></li>
+												<li><a href="4.1.1.html">4.1 Seizure Detection: Adult Seizure</a></li>
+												<li><a href="4.1.2.html">4.1.2 Detection of Neonate Seizure</a></li>
+												<li><a href="4.2.html">4.2 Chaotic Behaviour of EEG Sources</a></li>
+												<li><a href="4.3.html">4.3 Predictability of Seizure from the EEGs</a></li>
+												<li><a href="4.4.html">4.4 Fusion of EEG-fMRI Data for Seizure Prediction</a></li>
+												<li><a href="4.5.html">4.5 Summary and Conclusions</a></li>
+											</ul>
+										</section>
+										<section>
+											<header>
+												<h2>Today's Word</h2>
+											</header>
+											<p>
+												이 논문을 이해하기 위해서 중요한 단어들 수록
+											</p>
+											<ul class="link-list">
+												<li><span style="color:blue">rhythmic run 율동적인</span></li>
+
+											</ul>
+
+										</section>
+
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+
+			<!-- Footer -->
+			<div id="footer-wrapper">
+				<footer id="footer" class="container">
+					<div class="row">
+						<div class="8u 12u(mobile)">
+
+							<!-- Links -->
+								<section>
+									<h2> Sites related my study.</h2>
+									<div>
+										<div class="row">
+											<div class="3u 12u(mobile)">
+												<ul class="link-list last-child">
+													<li><a href="http://klinear.tistory.com">김선형 : 정보보호 공부</a></li>
+												</ul>
+											</div>
+											<div class="3u 12u(mobile)">
+												<ul class="link-list last-child">
+													<li><a href="http://blog.naver.com/PostView.nhn?blogId=ldj1725&logNo=220419060424">새벽: Signal System</a></li>
+												</ul>
+											</div>
+											<div class="3u 12u(mobile)">
+												<ul class="link-list last-child">
+													<li><a href="https://laonple.blog.me/220914873095">라온피플:머신러닝</a></li>
+												</ul>
+											</div>
+											<div class="3u 12u(mobile)">
+												<ul class="link-list last-child">
+													<li><a href="https://blog.naver.com/hafs_snu/220862506048">공부하는 대학생들</a></li>
+												</ul>
+											</div>
+										</div>
+									</div>
+								</section>
+
+						</div>
+						<div class="4u 12u(mobile)">
+
+							<!-- Blurb -->
+								<section>
+									<h2>Another My Blog</h2>
+									<p>
+										Study of My undergraduate's degree:
+										<a href="https://blog.naver.com/soojin7897">
+											<br>RedCoder를 위하여</a>
+									</p>
+								</section>
+
+						</div>
+					</div>
+				</footer>
+			</div>
+
+		<!-- Copyright -->
+			<div id="copyright">
+				Copyright 2018. BSJ All rights reserved.
+			</div>
+
+	</div>
+
+	<!-- Scripts -->
+		<script src="assets/js/jquery.min.js"></script>
+		<script src="assets/js/skel.min.js"></script>
+		<script src="assets/js/skel-viewport.min.js"></script>
+		<script src="assets/js/util.js"></script>
+		<!--[if lte IE 8]><script src="assets/js/ie/respond.min.js"></script><![endif]-->
+		<script src="assets/js/main.js"></script>
+
+</body>
+</html>
