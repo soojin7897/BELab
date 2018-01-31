@@ -57,22 +57,26 @@
 										<section>
 											<header>
 												<h2>4.1 Seizure Detection</h2>
-												<h3>4.1.2 Detection of Neonate Seizure</h3>
+												<h3>4.1.1 Adult Seizure Detection</h3>
 											</header>
 											<p>
-												발작은 신생아의 약 0.5%(생후 4주)에서 발생한다.
-												<br>이는 중추 신경계(CNS)의 이상(장애)을 보여 주는 분명한 지표이다. 이러한 이상에는 많은 원인이 있으며, 대부분의 원인은 CNS내의 생화학적 불균형, 두개(골)의 내출혈과 감염,
-												결함 발달(구조적 결함), 수동적인 약물 중독 및 금단 증상 때문이다[42].
+												클리닉에서, 의료적으로 다루기 어려운 부분간질환자의 경우, 흔히 자발적 발작성의, 시간이 많이 걸리는 비디오-EEG 감시(monitoring)가 필요하다[11].
+												<br>그러나 내장형 EEG의 시각적 분석은 시간을 많이 소비한다. 발작 신호를 감시하고 간질 구역을 식별하기 위한 침습적(invasive) 방법을 적용하는 것은 위험하며,
+												환자에게 위험을 일으킬 수 있다.[그래서 시간소모 및 위험을 줄이기 위해, 자동화된 발작감지 시스템이 필요하며] <br>자동화된 발작 감지 시스템을 설계하기 전에, 발작 전/도중/ 후의 EEG신호의
+												특성을 판단하고 평가해야 한다.
 											</p>
 										 <!--<h3><span style="color:red"><li>1.1 History</li></span></h3>-->
 											<p>
-												하지만 신생아 EEG의 분석은 생물 의학적 신호 처리 맥락에서 매우 어려운 문제이다.
-												<br>성인과 달리, 스파이크(spike)가 있어도 발작의 징후는 아닐 수도 있다. 신생아의 임상적 징후는 가끔 발작이 통제 불가능하고 반복적인 신체의 흔들림 또는 근육의 강장제적굴절(tonic flexion of muscles)을
-												동반하는 성인의 징후만큼 항상 명확하게 나타나는 것은 아니다.
-												<br>그래서 신생아의 덜 명확확 징후로는 즉, 미묘한 발작의 경우 안구 고정, 눈꺼풀의 반복적인 깜박임 또는 상하 좌우로 흔들림, 침을 질질 흘림, 기타 가벼운 얼굴 표정
-												또는 몸의 움직임이 나타날 수 있다.
-												<br><p><span class="toggle">따라서 신생아에 대한 간질 발작의 발견은 성인에 비해 훨씬 더 복잡하며, 지금까지 오직 몇 가지 접근법만 시도되어 왔다.</span>
-												<br>이러한 접근 방식은 이 섹션에서 간략히 설명할 것이다.
+												<br>이 기능을 더 잘 설명하기 위해 몇 가지 기능이 식별되어 왔다.
+												<br>이는 짧은 시간동안 신호 에너지와 같은 신호의 정적인 행동 혹은 발작이 시작되는 동안 주파수의 변화와 혼란함 같은 신호의 역동적인 행동을 보여줄 지도 모른다.
+												자동적인 발작감지 정량화와 인식은 1970년대부터 임상, 물리학, 공학 공동체 내에서 흥미로운 연구 분야였다[14–27].
+												<br>스파이크(spike) 검출[16,21-23]에서의 초기 작업에서는 상대 진폭, 선명도 및 EEG파장의 지속 시간과 같은 여러 파라미터를 EEG신호로부터 측정하여 평가했다.
+												이 방법은 다양한 잡파(artifact)에 민감하다.
+												이러한 시도에서 능동적 각성(깨어있음) 또는 비동기EEG와 같은 다양한 상태가 정의되었으며, 이로 인해 대표적으로 일시적인 비간질성 현상을 발생할 것으로 예상된다[22,23].
+												<br> ◆스파이크(spike)와 잡파(artifact)란,
+												<br>spike는 EEG에서 측정하는 중요한 신호 중 하나이며,
+												<br>artifact는 보통 EEG뇌파는 매우 약한 대뇌의 전위를 증폭시켜서 뇌파로 보여주는데 이 때 다른 미약한 신호도 증폭되어 나타난다.
+												따라서 대뇌 전위 이외의 증폭된 신호를 잡파(artifact)라고 할 수 있다.
 											</p>
 
 											<p>
@@ -290,13 +294,13 @@
 												<h2>Paper List</h2>
 											</header>
 											<ul class="link-list">
-												<li><a href="introduction.html">Introduction</a></li>
-												<li><a href="4.1.html">4.1 Seizure Detection</a></li>
-												<li><a href="4.1.2.html">4.1.2 Detection of Neonate Seizure</a></li>
-												<li><a href="4.2.html">4.2 Chaotic Behaviour of EEG Sources</a></li>
-												<li><a href="4.3.html">4.3 Predictability of Seizure from the EEGs</a></li>
-												<li><a href="4.4.html">4.4 Fusion of EEG-fMRI Data for Seizure Prediction</a></li>
-												<li><a href="4.5.html">4.5 Summary and Conclusions</a></li>
+												<li><a href="EEGchap4/introduction.html">Introduction</a></li>
+												<li><a href="EEGchap4/4.1.html">4.1 Seizure Detection</a></li>
+												<li><a href="EEGchap4/4.1.2.html">4.1.2 Detection of Neonate Seizure</a></li>
+												<li><a href="EEGchap4/4.2.html">4.2 Chaotic Behaviour of EEG Sources</a></li>
+												<li><a href="EEGchap4/4.3.html">4.3 Predictability of Seizure from the EEGs</a></li>
+												<li><a href="EEGchap4/4.4.html">4.4 Fusion of EEG-fMRI Data for Seizure Prediction</a></li>
+												<li><a href="EEGchap4/4.5.html">4.5 Summary and Conclusions</a></li>
 											</ul>
 										</section>
 										<section>
